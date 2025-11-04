@@ -1,0 +1,47 @@
+:root {
+  --background-color: #101524;
+  --main-color: #f9cf87;
+  --important-color: #a40239;
+}
+
+/* Regular */
+@font-face {
+  font-family: "Berylium";
+  src: url("../fonts/berylium/Berylium\ Rg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular Italic */
+@font-face {
+  font-family: "Berylium";
+  src: url("../fonts/berylium/Berylium\ Rg\ It.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Berylium";
+  src: url("../fonts/berylium/Berylium\ Bd.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: "Berylium";
+  src: url("../fonts/berylium/Berylium\ Bd\ It.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  font-family: "Berylium", sans-serif;
+  background-color: var(--background-color);
+  color: var(--main-color);
+}
+h1 {
+  font-family: "Berylium", sans-serif;
+  color: var(--important-color);
+}
