@@ -45,3 +45,56 @@ h1 {
   font-family: "Berylium", sans-serif;
   color: var(--important-color);
 }
+
+.inner {
+  margin: auto;
+}
+
+.corps {
+  margin: 5% 20%;
+  padding: 2%;
+  text-align: justify;
+}
+
+.corps h1 {
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.corps p {
+  line-height: 1.5rem;
+}
+
+.corps table {
+  width: 100%;
+  margin-top: 2%;
+  text-align: center;
+}
+
+.corps th {
+  text-transform: uppercase;
+}
+
+.corps table,
+.corps th,
+.corps td {
+  border: 1px solid var(--main-color);
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.corps a {
+  color: var(--main-color);
+}
+
+.corps a:hover {
+  color: var(--important-color);
+  background-color: var(--main-color);
+  border-radius: 10px;
+  padding: 0.25%;
+}
+
+.mail {
+  text-transform: lowercase;
+  text-decoration: underline;
+}
