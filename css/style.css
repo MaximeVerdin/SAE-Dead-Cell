@@ -40,7 +40,33 @@ body {
   font-family: "Berylium", sans-serif;
   background-color: var(--background-color);
   color: var(--main-color);
+  margin: 0;
 }
+
+.header {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header > .inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+
+.header a {
+  text-align: center;
+  margin: 15px 0px;
+  padding: 20px 0px;
+  width: 20%;
+  background-color: var(--important-color);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Pixelify sans";
+  border-radius: 10px;
+}
+
 h1 {
   font-family: "Berylium", sans-serif;
   color: var(--important-color);
@@ -66,9 +92,9 @@ h1 {
 
 .jeux > a > img {
   width: 100%;
-  max-height: 20rem;
+  max-height: 10rem;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
   margin-bottom: 30px;
 }
 
@@ -88,8 +114,7 @@ h1 {
 }
 
 .corps {
-  margin: 5% 20%;
-  padding: 2%;
+  margin: 5% 10%;
   text-align: justify;
 }
 
@@ -154,7 +179,9 @@ p a:hover {
   }
 
   .dlc > a,
-  .image > a {
+  .image > a,
+  .dlc > a > img,
+  .image > a > img {
     width: 100%;
   }
 }
