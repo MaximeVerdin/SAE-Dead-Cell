@@ -50,6 +50,43 @@ h1 {
   margin: auto;
 }
 
+.jeux,
+.goodies {
+  text-align: center;
+}
+
+.jeux h2,
+.goodies h2 {
+  text-transform: uppercase;
+  color: var(--main-color);
+  border-top: solid 2px var(--main-color);
+  border-bottom: solid 2px var(--main-color);
+  margin: 30px 0;
+}
+
+.jeux > a > img {
+  width: 100%;
+  max-height: 10rem;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 30px;
+}
+
+.dlc,
+.image {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.dlc > a,
+.image > a,
+.dlc > a > img,
+.image > a > img {
+  max-width: 100%;
+}
+
 .corps {
   margin: 5% 20%;
   padding: 2%;
@@ -83,11 +120,13 @@ h1 {
   padding: 10px;
 }
 
-.corps a {
+td a,
+p a {
   color: var(--main-color);
 }
 
-.corps a:hover {
+td a:hover,
+p a:hover {
   color: var(--important-color);
   background-color: var(--main-color);
   border-radius: 10px;
@@ -97,4 +136,25 @@ h1 {
 .mail {
   text-transform: lowercase;
   text-decoration: underline;
+}
+
+@media screen and ((max-width: 768px) or (orientation: portrait) or (max-height: 599px)) {
+  .corps {
+    margin: 0% 5%;
+  }
+
+  .jeux > a > img {
+    max-height: 100%;
+  }
+
+  .dlc,
+  .image {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .dlc > a,
+  .image > a {
+    width: 100%;
+  }
 }
