@@ -91,12 +91,39 @@ h1 {
   margin: 30px 0;
 }
 
+.jeux > a > img:hover {
+  transition: ease-in-out 0.5s;
+  opacity: 0.5;
+}
+
+.jeux > a:has(img:hover)::after {
+  display: inline;
+  transition: ease-in-out 0.5s;
+  content: "30€";
+  text-decoration: none;
+  color: red;
+  left: 50%;
+  top: 30%;
+  padding: 20px;
+  background-color: white;
+}
+
+.dlc {
+  margin-top: 30px;
+}
+
+.dlc > a:hover,
+.goodies a:hover {
+  transition: ease-in-out 0.5s;
+  transform: translateY(-10px);
+  box-shadow: 0 0 50px 10px var(--important-color);
+}
+
 .jeux > a > img {
   width: 100%;
   max-height: 10rem;
   object-fit: cover;
   object-position: center;
-  margin-bottom: 30px;
 }
 
 .dlc,
@@ -164,11 +191,11 @@ p a:hover {
   text-decoration: underline;
 }
 
-.corps:has(.presentation){ 
-  margin: 0; 
-  padding: 0; 
-  display: flex; 
-  flex-direction: column ; 
+.corps:has(.presentation) {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .presentation {
@@ -177,12 +204,11 @@ p a:hover {
   background: url("../img/gif2-page-ouverture.gif") center / cover no-repeat;
 
   display: flex;
-  flex-direction: column;  /* pour empiler le texte et l'image */
-  align-items: center;     /* centrer horizontalement */
+  flex-direction: column; /* pour empiler le texte et l'image */
+  align-items: center; /* centrer horizontalement */
   justify-content: center; /* centrer verticalement */
   text-align: center;
   border-bottom: 2px solid var(--main-color);
-
 }
 
 .presentation > a > .image-presentation {
@@ -203,7 +229,7 @@ p a:hover {
   border-bottom: 3px solid var(--main-color);
 }
 
-.baniere > .image-logo{
+.baniere > .image-logo {
   width: 150px;
   height: auto;
 }
@@ -213,9 +239,8 @@ p a:hover {
   display: flex;
   flex-direction: column-reverse;
   height: 300px;
-  background: url("../img/img-acceuil-1-1.jpg") bottom/cover no-repeat;  
+  background: url("../img/img-acceuil-1-1.jpg") bottom/cover no-repeat;
   border-bottom: 3px solid var(--main-color);
-
 }
 
 .text-1 {
@@ -227,16 +252,14 @@ p a:hover {
   margin: 0 10%;
 }
 
-
-
-.image2-accueil { 
+.image2-accueil {
   display: flex;
   flex-direction: row-reverse;
-  
+
   height: 300px;
-  background: url("../img/img-accueil-2.jpg") bottom/cover no-repeat; 
-  border-bottom: 3px solid var(--main-color); 
-} 
+  background: url("../img/img-accueil-2.jpg") bottom/cover no-repeat;
+  border-bottom: 3px solid var(--main-color);
+}
 
 .text-2 {
   margin-right: 20px;
@@ -246,8 +269,7 @@ p a:hover {
   background-color: rgba(0, 0, 0, 0.6);
   align-self: center;
   margin: 0 10%;
-
-  }
+}
 
 .corps:has(.article) {
   background-color: rgba(0, 0, 0, 0.08);
