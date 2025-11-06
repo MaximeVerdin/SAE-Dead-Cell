@@ -301,6 +301,24 @@ p a:hover {
   margin: 0 10%;
 }
 
+.image3-accueil {
+  justify-content: center;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 300px;
+  background: url("../img/boss.png") bottom/cover no-repeat;
+  border-bottom: #f9cf87 3px solid;
+}
+
+.text-3 {
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0 10%;
+}
+
 .corps:has(.article) {
   background-color: rgba(0, 0, 0, 0.08);
   margin: 0;
