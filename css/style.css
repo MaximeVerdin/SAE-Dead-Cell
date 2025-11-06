@@ -398,7 +398,8 @@ p a:hover {
   }
 
   .text-1,
-  .text-2 {
+  .text-2,
+  .text-3 {
     width: 80%;
     margin: 0 auto;
     text-align: center;
