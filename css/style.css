@@ -419,4 +419,10 @@ body:has(.article) > .footer{
     margin: 0 auto;
     text-align: center;
   }
+
+  .header a {
+    font-size: clamp(0.8rem, 2.5vw, 1rem); 
+    word-wrap: break-word;
+    white-space: normal;
+  }
 }
