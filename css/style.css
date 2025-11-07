@@ -1,10 +1,11 @@
+/* Variables globales */
 :root {
   --background-color: #101524;
   --main-color: #f9cf87;
   --important-color: #a40239;
 }
 
-/* Regular */
+/* Polices (déclarations @font-face) */
 @font-face {
   font-family: "Berylium";
   src: url("../fonts/berylium/Berylium\ Rg.otf") format("opentype");
@@ -12,7 +13,7 @@
   font-style: normal;
 }
 
-/* Regular Italic */
+/* Italique régulier */
 @font-face {
   font-family: "Berylium";
   src: url("../fonts/berylium/Berylium\ Rg\ It.otf") format("opentype");
@@ -20,7 +21,7 @@
   font-style: italic;
 }
 
-/* Bold */
+/* Gras */
 @font-face {
   font-family: "Berylium";
   src: url("../fonts/berylium/Berylium\ Bd.otf") format("opentype");
@@ -28,7 +29,7 @@
   font-style: normal;
 }
 
-/* Bold Italic */
+/* Gras italique */
 @font-face {
   font-family: "Berylium";
   src: url("../fonts/berylium/Berylium\ Bd\ It.otf") format("opentype");
@@ -36,6 +37,7 @@
   font-style: italic;
 }
 
+/* Styles globaux du document */
 body {
   font-family: "Berylium", sans-serif;
   background-color: var(--background-color);
@@ -44,6 +46,7 @@ body {
   margin: 0;
 }
 
+/* En-tête (header) et sa structure interne */
 .header {
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 30px 0 var(--important-color);
@@ -78,12 +81,10 @@ h1 {
   margin: auto;
 }
 
-.article > img{
+.article > img {
   width: 50%;
   border-radius: 5px;
 }
-
-
 
 .jeux,
 .goodies {
@@ -168,11 +169,13 @@ h1 {
   display: block;
 }
 
+/* Cas spécifique pour la DLC 1 (position droite) */
 a:has(img[alt="DLC 1"]) > .prix {
   left: auto;
   right: 10%;
 }
 
+/* Contenu principal (corps) : texte et tableaux */
 .corps {
   margin: 5% 10%;
   text-align: justify;
@@ -192,6 +195,7 @@ a:has(img[alt="DLC 1"]) > .prix {
   font-size: 20px;
 }
 
+/* Pour les mentions légales */
 .corps table {
   width: 100%;
   margin-top: 2%;
@@ -273,7 +277,7 @@ p a:hover {
 
 .text-1 h2,
 .text-2 h2,
-.text-3 h2{
+.text-3 h2 {
   color: var(--important-color);
 }
 
@@ -324,7 +328,6 @@ p a:hover {
   border-bottom: #f9cf87 3px solid;
 }
 
-
 .corps:has(.article) {
   background-color: rgba(0, 0, 0, 0.08);
   margin: 0;
@@ -346,10 +349,12 @@ p a:hover {
   text-align: center;
 }
 
-body:has(.article) > .footer{
+/* Ajuste le footer sur la page de présentation */
+body:has(.article) > .footer {
   margin-top: 20px;
 }
 
+/* Pied de page (footer) et sa structure interne */
 .footer {
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 -4px 30px 0 var(--important-color);
@@ -371,7 +376,6 @@ body:has(.article) > .footer{
   font-size: 20px;
   text-transform: capitalize;
 }
-
 
 @media screen and ((max-width: 768px) or (orientation: portrait) or (max-height: 599px)) {
   .corps {
@@ -421,8 +425,53 @@ body:has(.article) > .footer{
   }
 
   .header a {
-    font-size: clamp(0.8rem, 2.5vw, 1rem); 
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
     word-wrap: break-word;
     white-space: normal;
+    margin: 0;
+    width: 80%;
+  }
+
+  .header > .inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+  }
+
+  .header > .inner::before {
+    content: "⏷";
+    align-self: self-end;
+    margin: 10px 10%;
+    background-color: var(--important-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .header > .inner:hover::before,
+  .header > .inner:focus-within:before {
+    content: "⏶";
+  }
+
+  .header > .inner > a {
+    display: none;
+  }
+
+  .header > .inner:hover > a,
+  .header > .inner:focus-within > a {
+    display: block;
+  }
+
+  .header > .inner > a:last-child {
+    margin-bottom: 10px;
+  }
+
+  .header a:hover {
+    background-color: color-mix(
+      in srgb,
+      var(--important-color),
+      transparent 20%
+    );
   }
 }
